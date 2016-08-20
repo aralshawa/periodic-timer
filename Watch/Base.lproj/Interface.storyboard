@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Ua-Ht-ilA">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--PeriodicTimer-->
+        <scene sceneID="DBP-g6-dTT">
+            <objects>
+                <controller identifier="PeriodicTimer" id="1Ua-Ht-ilA" customClass="InterfaceController">
+                    <items>
+                        <group width="136" height="143" alignment="left" layout="vertical" id="8wh-6i-3F7">
+                            <items>
+                                <label width="136" height="60.5" alignment="left" text="00" textAlignment="center" id="uLZ-4u-bye">
+                                    <color key="textColor" red="0.3529411764705882" green="0.59607843137254901" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="85"/>
+                                    <variation key="device=watch38mm" height="98.5"/>
+                                    <variation key="device=watch42mm" height="126.5" width="156"/>
+                                </label>
+                                <button width="1" height="38.5" alignment="left" title="Start" id="q3f-pL-Krf">
+                                    <fontDescription key="font" type="system" weight="light" pointSize="15"/>
+                                    <connections>
+                                        <action selector="onTimerToggle" destination="1Ua-Ht-ilA" id="qiX-ZN-uFt"/>
+                                    </connections>
+                                </button>
+                                <picker height="30" alignment="left" id="foY-T6-27O">
+                                    <variation key="device=watch42mm" height="2"/>
+                                    <connections>
+                                        <action selector="pickerValueDidChange:" destination="1Ua-Ht-ilA" id="vWx-qs-fQW"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                            <variation key="device=watch42mm" height="173" width="156"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="interfacePicker" destination="foY-T6-27O" id="bi0-Zc-qaG"/>
+                        <outlet property="timerLabel" destination="uLZ-4u-bye" id="QLo-D8-gXK"/>
+                        <outlet property="timerToggleButton" destination="q3f-pL-Krf" id="EVg-xk-KtD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="587" y="397"/>
+        </scene>
+    </scenes>
+</document>

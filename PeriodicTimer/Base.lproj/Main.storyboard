@@ -17,19 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-1b-Buz">
-                                <rect key="frame" x="108" y="141" width="198" height="99"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="198" id="hkJ-Ms-Uyq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="83"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gmN-AC-j31" appends="YES" id="1HW-5U-Oaq"/>
-                                </connections>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qtb-BY-5sd">
                                 <rect key="frame" x="182" y="663" width="51" height="31"/>
                             </switch>
@@ -39,17 +26,17 @@
                                     <constraint firstAttribute="width" constant="167" id="Btv-cl-p7P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="TOG-KB-IIs">
-                                <rect key="frame" x="160" y="247" width="94" height="29"/>
+                                <rect key="frame" x="160" y="288" width="94" height="29"/>
                                 <connections>
                                     <action selector="onConfigureTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="fYf-9G-mBh"/>
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55l-2G-G9K">
-                                <rect key="frame" x="108" y="315" width="198" height="36"/>
+                                <rect key="frame" x="108" y="356" width="198" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="198" id="HwF-2R-e72"/>
                                 </constraints>
@@ -59,16 +46,29 @@
                                     <action selector="onTimerToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P84-LJ-zwc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-1b-Buz">
+                                <rect key="frame" x="87" y="104" width="241" height="176"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="hkJ-Ms-Uyq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="147"/>
+                                <color key="textColor" red="0.3529411764705882" green="0.59607843137254901" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gmN-AC-j31" appends="YES" id="1HW-5U-Oaq"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="55l-2G-G9K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7hk-KC-PHQ"/>
                             <constraint firstItem="Qtb-BY-5sd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GxK-VG-1Mf"/>
-                            <constraint firstItem="55l-2G-G9K" firstAttribute="top" secondItem="2sX-1b-Buz" secondAttribute="bottom" constant="75" id="PVv-OE-asH"/>
+                            <constraint firstItem="55l-2G-G9K" firstAttribute="top" secondItem="2sX-1b-Buz" secondAttribute="bottom" constant="76" id="PVv-OE-asH"/>
                             <constraint firstItem="2sX-1b-Buz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PxW-mt-KmE"/>
-                            <constraint firstItem="TOG-KB-IIs" firstAttribute="top" secondItem="2sX-1b-Buz" secondAttribute="bottom" constant="7" id="Sif-rQ-e3j"/>
+                            <constraint firstItem="TOG-KB-IIs" firstAttribute="top" secondItem="2sX-1b-Buz" secondAttribute="bottom" constant="8" id="Sif-rQ-e3j"/>
                             <constraint firstItem="TOG-KB-IIs" firstAttribute="centerX" secondItem="2sX-1b-Buz" secondAttribute="centerX" id="at0-t0-U35"/>
-                            <constraint firstItem="2sX-1b-Buz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="121" id="f26-VS-nKf"/>
+                            <constraint firstItem="2sX-1b-Buz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="f26-VS-nKf"/>
                             <constraint firstItem="zmo-qH-zpW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pK0-ul-m9y"/>
                             <constraint firstItem="zmo-qH-zpW" firstAttribute="top" secondItem="Qtb-BY-5sd" secondAttribute="bottom" constant="8" id="uVx-y6-abT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zmo-qH-zpW" secondAttribute="bottom" constant="13" id="vdv-cj-1CM"/>
