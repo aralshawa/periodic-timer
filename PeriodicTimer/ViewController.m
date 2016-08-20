@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 #define MAX_TIMER_VALUE 60.0
 #define MIN_TIMER_VALUE 0.0
@@ -44,12 +45,17 @@ static NSString * const TIMER_TOGGLE_BTN_DISABLED_LABEL = @"Stop";
 	
 	if (_currTime < 0) {
 		// Period hit - - -
-		// TODO: Play period sound
+		// Asynchronously play period sound if enabled
+		if (self.perSecTickSwitch.on) {
+			NSURL *fileURL = [NSURL URLWithString:@"/System/Library/Audio/UISounds/Modern/calendar_alert_chord.caf"];
+			SystemSoundID soundID;
+			AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)fileURL, &soundID);
+			AudioServicesPlaySystemSoundWithCompletion(soundID, NULL);
+			AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, NULL);
+		}
 		
 		// Reset
 		_currTime = _targetPeriod;
-	} else {
-		// TODO: Play tick sound
 	}
 	
 	dispatch_async(dispatch_get_main_queue(), ^{
@@ -67,15 +73,18 @@ static NSString * const TIMER_TOGGLE_BTN_DISABLED_LABEL = @"Stop";
 
 		self.timeStepper.enabled = YES;
 		self.timeStepper.alpha = 1.f;
+		self.timerLabel.textColor = [UIColor blackColor];
 		
 		[self.timerToggleButton setTitle:TIMER_TOGGLE_BTN_ENABLED_LABEL forState:UIControlStateNormal];
 	} else {
 		// Start timer
 		self.timeStepper.enabled = NO;
 		self.timeStepper.alpha = 0.5f;
+		self.timerLabel.textColor = [UIColor blueColor];
 		
 		[self.timerToggleButton setTitle:TIMER_TOGGLE_BTN_DISABLED_LABEL forState:UIControlStateNormal];
 		
+		_currTime = _targetPeriod;
 		_tickTimer = [NSTimer scheduledTimerWithTimeInterval:TIMER_QUANTUM target:self selector:@selector(onTimerTick:) userInfo:nil repeats:YES];
 	}
 }

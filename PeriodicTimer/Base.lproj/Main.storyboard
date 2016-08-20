@@ -33,10 +33,10 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qtb-BY-5sd">
                                 <rect key="frame" x="182" y="663" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Second Tick" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmo-qH-zpW">
-                                <rect key="frame" x="136" y="702" width="141" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period Notify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmo-qH-zpW">
+                                <rect key="frame" x="124" y="702" width="167" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="141" id="Btv-cl-p7P"/>
+                                    <constraint firstAttribute="width" constant="167" id="Btv-cl-p7P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -49,11 +49,11 @@
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55l-2G-G9K">
-                                <rect key="frame" x="108" y="315" width="198" height="30"/>
+                                <rect key="frame" x="108" y="315" width="198" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="198" id="HwF-2R-e72"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="onTimerToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P84-LJ-zwc"/>

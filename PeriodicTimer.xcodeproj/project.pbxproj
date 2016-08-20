@@ -13,6 +13,7 @@
 		556047451D68C94700F46621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556047431D68C94700F46621 /* Main.storyboard */; };
 		556047471D68C94700F46621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556047461D68C94700F46621 /* Assets.xcassets */; };
 		5560474A1D68C94700F46621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556047481D68C94700F46621 /* LaunchScreen.storyboard */; };
+		556047521D68DB6800F46621 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556047511D68DB6800F46621 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		556047461D68C94700F46621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		556047491D68C94700F46621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5560474B1D68C94700F46621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556047511D68DB6800F46621 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556047521D68DB6800F46621 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				556047391D68C94700F46621 /* PeriodicTimer */,
+				556047531D68DB6E00F46621 /* Frameworks */,
 				556047381D68C94700F46621 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +81,14 @@
 				5560473B1D68C94700F46621 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		556047531D68DB6E00F46621 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				556047511D68DB6800F46621 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
