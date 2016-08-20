@@ -42,8 +42,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="TOG-KB-IIs">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="TOG-KB-IIs">
                                 <rect key="frame" x="160" y="247" width="94" height="29"/>
+                                <connections>
+                                    <action selector="onConfigureTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="fYf-9G-mBh"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55l-2G-G9K">
                                 <rect key="frame" x="108" y="315" width="198" height="30"/>
@@ -52,6 +55,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="onTimerToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P84-LJ-zwc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -69,6 +75,12 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="perSecTickSwitch" destination="Qtb-BY-5sd" id="9UN-0d-o18"/>
+                        <outlet property="timeStepper" destination="TOG-KB-IIs" id="Ofm-tO-1gf"/>
+                        <outlet property="timerLabel" destination="2sX-1b-Buz" id="wDG-rj-c1w"/>
+                        <outlet property="timerToggleButton" destination="55l-2G-G9K" id="z0w-7a-6vY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="gmN-AC-j31"/>
