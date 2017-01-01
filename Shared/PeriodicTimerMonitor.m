@@ -29,7 +29,7 @@
 		_delegate = delegate; // Weakly ref the delegate
 		_inProgress = NO;
 	}
-	
+
 	return self;
 }
 
@@ -59,6 +59,10 @@
 		[_tickTimer invalidate];
 	} else {
 		// Start timer
+		// NOTE: NSTimer provides no real time guarantees. Due to how run loops are managed, the effective resolution is 50-100 ms.
+		// REFERENCE: https://developer.apple.com/reference/foundation/timer
+		// TODO: Use GCD for timer creation.
+		// REFERENCE: https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/GCDWorkQueues/GCDWorkQueues.html#//apple_ref/doc/uid/TP40008091-CH103-SW2
 		_currTime = _targetPeriod;
 		_tickTimer = [NSTimer scheduledTimerWithTimeInterval:self.timerQuantum target:self selector:@selector(onTimerTick:) userInfo:nil repeats:YES];
 	}
@@ -73,15 +77,15 @@
 {
 	// All timing is based off of the tickTimer to ensure consistency
 	_currTime  -= self.timerQuantum;
-	
+
 	if (_currTime < 0) {
 		// Period hit - - -
 		[self.delegate onTimerPeriodForMonitor:self];
-		
+
 		// Reset
 		_currTime = _targetPeriod;
 	}
-	
+
 	[self.delegate onTimerTickForMonitor:self];
 }
 
