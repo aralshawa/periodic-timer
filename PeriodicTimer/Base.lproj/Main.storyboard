@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,29 +18,29 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qtb-BY-5sd">
-                                <rect key="frame" x="182" y="663" width="51" height="31"/>
+                                <rect key="frame" x="163" y="594" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period Notify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmo-qH-zpW">
-                                <rect key="frame" x="124" y="702" width="167" height="21"/>
+                                <rect key="frame" x="104" y="633" width="167" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="Btv-cl-p7P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="TOG-KB-IIs">
-                                <rect key="frame" x="160" y="288" width="94" height="29"/>
+                                <rect key="frame" x="140" y="288" width="94" height="29"/>
                                 <connections>
                                     <action selector="onConfigureTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="fYf-9G-mBh"/>
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55l-2G-G9K">
-                                <rect key="frame" x="108" y="356" width="198" height="36"/>
+                                <rect key="frame" x="88.5" y="356" width="198" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="198" id="HwF-2R-e72"/>
                                 </constraints>
@@ -47,20 +51,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-1b-Buz">
-                                <rect key="frame" x="87" y="104" width="241" height="176"/>
+                                <rect key="frame" x="67" y="104" width="241" height="176"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="hkJ-Ms-Uyq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="147"/>
-                                <color key="textColor" red="0.3529411764705882" green="0.59607843137254901" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.3529411764705882" green="0.59607843137254901" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gmN-AC-j31" appends="YES" id="1HW-5U-Oaq"/>
                                 </connections>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="55l-2G-G9K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7hk-KC-PHQ"/>
                             <constraint firstItem="Qtb-BY-5sd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GxK-VG-1Mf"/>
@@ -74,7 +78,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zmo-qH-zpW" secondAttribute="bottom" constant="13" id="vdv-cj-1CM"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="perSecTickSwitch" destination="Qtb-BY-5sd" id="9UN-0d-o18"/>
                         <outlet property="timeStepper" destination="TOG-KB-IIs" id="Ofm-tO-1gf"/>
